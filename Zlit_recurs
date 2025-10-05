@@ -1,0 +1,87 @@
+digraph G {
+
+  node [shape=box, style=filled, fillcolor=white];
+
+  split1 [label="Початковий виклик:\n [54 65 7 33 86 29 11 91 12]"];
+  split1 -> split2a;
+
+  split2a [label="Етап розділення:\n [54 65 7 33]              [86 29 11 91 12]"];
+
+  split2a -> split3a;
+  split2a -> split3b;
+
+  split3a [label="[54 65]"];
+  split3b [label="[7 33]"];
+
+  split2a -> split3c;
+  split2a -> split3d;
+
+  split3c [label="[86 29]"];
+  split3d [label="[11 91]"];
+  
+  split2a -> split3e;
+  
+  split3e [label="[12]"];
+
+  split3a -> split4a;
+  split3a -> split4b;
+  
+  split4a [label="[54]"];
+  split4b [label="[65]"];
+
+  split3b -> split4c;
+  split3b -> split4d;
+  
+  split4c [label="[7]"];
+  split4d [label="[33]"];
+ 
+  split3c -> split4f;
+  split3c -> split4g;
+ 
+  split4f [label="[86]"];
+  split4g [label="[29]"];
+
+  split3d -> split4h;
+  split3d -> split4i;
+  
+  split4h [label="[11]"];
+  split4i [label="[91]"];
+
+  split4a -> split5a;
+  split4b -> split5a;
+  
+  split5a [label="[54 65]"];
+  
+  split4c -> split5b;
+  split4d -> split5b;
+  
+  split5b [label="[7 33]"];
+  
+
+  split4f -> split5c;
+  split4g-> split5c;
+  
+  split5c [label="[29 86]"];
+  
+  split4h -> split5d;
+  split4i-> split5d;
+  
+  split5d [label="[11 91]"];
+  
+  split5a -> split6a;
+  split5b -> split6a;
+  split3e -> split6a;
+  
+  split6a [label="[7 12 33 54 65]"];
+  
+  split5c -> split6b;
+  split5d -> split6b;
+  
+  split6b [label="[11 29 86 91]"];
+  
+  split6a -> split7a;
+  split6b -> split7a;
+  
+  split7a [label="[7 11 12 29 33 54 65 86 91"];
+  
+}
