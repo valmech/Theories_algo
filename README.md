@@ -1,1 +1,1 @@
-# Theories_algo
+Lab6
